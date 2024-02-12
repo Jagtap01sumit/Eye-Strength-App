@@ -7,16 +7,26 @@ export default function WelcomeScreen() {
 
   const onPressLearnMore = () => {
     // Navigate to the home page (replace 'Home' with the name of your home screen)
-    navigation.navigate('distance');
+    navigation.navigate('charts');
   };
 
   return (
-    <SafeAreaView>
-      <View>
-        <Text style={{ backgroundColor: "black" }}>Welcome</Text>
-        <Pressable onPress={() => navigation.navigate("EyeHealth")}>
-          <Text>press</Text>
-        </Pressable>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.content}>
+        <Image
+          source={{
+            uri: 'https://th.bing.com/th/id/R.4232f2034d0d8a05c624c48d8fc7647e?rik=hZ%2f3q6PymRb5kQ&riu=http%3a%2f%2fpngimg.com%2fuploads%2feye%2fsmall%2feye_PNG35675.png&ehk=VhDXWnZdHc9lYOzzjy9iWIt31wEqZSqkLz0UjPNjRhQ%3d&risl=&pid=ImgRaw&r=0'
+          }}
+          style={styles.imageStyle}
+        />
+        <Text style={styles.textStyle}>Never take your eye health for granted!</Text>
+        <Text style={styles.mintextStyle}>Take Care!</Text>
+        <TouchableOpacity
+          onPress={onPressLearnMore}
+          style={styles.buttonStyle}
+        >
+          <Text style={styles.buttonText}>Welcome</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
@@ -36,17 +46,15 @@ const styles = StyleSheet.create({
     width: 300,
   },
   textStyle: {
-    fontSize: 21,
+    fontSize: 20,
     marginTop: 24,
   },
   mintextStyle: {
-    fontSize: 18,
+    fontSize: 16,
     marginTop: 14,
     marginBottom: 12,
   },
   buttonStyle: {
-    height:50,
-    width:160,
     backgroundColor: "#841584",
     borderRadius: 20,
     paddingVertical: 10,
@@ -55,7 +63,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: "white",
-    fontSize: 22,
+    fontSize: 18,
     textAlign: "center",
   },
 });
