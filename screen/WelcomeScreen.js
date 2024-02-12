@@ -11,22 +11,12 @@ export default function WelcomeScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
-        <Image
-          source={{
-            uri: 'https://th.bing.com/th/id/R.4232f2034d0d8a05c624c48d8fc7647e?rik=hZ%2f3q6PymRb5kQ&riu=http%3a%2f%2fpngimg.com%2fuploads%2feye%2fsmall%2feye_PNG35675.png&ehk=VhDXWnZdHc9lYOzzjy9iWIt31wEqZSqkLz0UjPNjRhQ%3d&risl=&pid=ImgRaw&r=0'
-          }}
-          style={styles.imageStyle}
-        />
-        <Text style={styles.textStyle}>Never take your eye health for granted!</Text>
-        <Text style={styles.mintextStyle}>Take Care!</Text>
-        <TouchableOpacity
-          onPress={onPressLearnMore}
-          style={styles.buttonStyle}
-        >
-          <Text style={styles.buttonText}>Welcome</Text>
-        </TouchableOpacity>
+    <SafeAreaView>
+      <View>
+        <Text style={{ backgroundColor: "black" }}>Welcome</Text>
+        <Pressable onPress={() => navigation.navigate("EyeHealth")}>
+          <Text>press</Text>
+        </Pressable>
       </View>
     </SafeAreaView>
   );
