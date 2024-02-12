@@ -177,7 +177,10 @@ export default function LoginScreen() {
                     justifyContent: "center",
                     borderRadius: 6,
                   }}
-                  onPress={handleSubmit(onSubmit)}
+                  // onPress={handleSubmit(onSubmit)}
+                  onPress={() => {
+                    navigation.navigate("Home");
+                  }}
                 >
                   <Text
                     style={{ fontSize: 18, fontWeight: "bold", color: "white" }}

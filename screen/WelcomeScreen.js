@@ -9,7 +9,7 @@ export default function WelcomeScreen() {
     <SafeAreaView>
       <View>
         <Text style={{ backgroundColor: "black" }}>Welcome</Text>
-        <Pressable onPress={() => navigation.navigate("Login")}>
+        <Pressable onPress={() => navigation.navigate("EyeHealth")}>
           <Text>press</Text>
         </Pressable>
       </View>
